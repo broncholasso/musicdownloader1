@@ -1,13 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
-# from mark1 import track_names
 
 def fetchandsave(url, path):
     r = requests.get(url)
     with open (path, 'w') as f:
         f.write(r.text)
 
-url = ""
+url = "https://en.savefrom.net/391GA/"
 
 fetchandsave(url, "fetched_data/flac_mp.html")
 
@@ -16,31 +15,21 @@ with open ('fetched_data/flac_mp.html', 'r') as file:
 
 soup = BeautifulSoup(html_doc, 'html.parser')
 
-# srch = soup.find('container',{'class':'input-group'})
+srch = soup.find('form', class_="sf-form link-form")
 
-srch_inp = soup.find('input', {'id': 'query'})
+srch_inp = soup.find('input', {'name': 'sf_url'})
 
-# keywords = "maps maroon5"
-
-# srch_inp['value']= keywords
 
 post_data = {
     
-    srch_inp['id']: 'maps maroon5'
+    srch_inp['name']: 'https://www.youtube.com/watch?v=th5_9woFJmk'
     
     }
+
 
 response = requests.post(url, data=post_data)
 
 
 with open('fetched_data/result.html', 'w') as file:
     file.write(response.text)
-
-
-print(response.status_code)
-
-
-
-
-
 

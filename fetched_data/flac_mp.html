@@ -1,264 +1,909 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en" class="en">
 <head>
-<meta charset="utf-8">
-<link rel="preload" href="/css.css" as="style">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-<title>MYFREEMP3 â· Free Mp3 Downloads</title>
-<meta name="description" content="MYFREEMP3 â­ MY FREE MP3 Search Engine â­ Mp3Juices Alternatives â­ Free music download â­ Listen audio music online â­ Download songs on mobile.">
-<meta name="keywords" content="free,mp3,download,music,songs,online,listen,search,sound,audio,remix">
-<meta property="og:title" content="MY FREE MP3 â­ Free Mp3 Downloads â­ Songs Music 320Kbps">
-<meta property="og:site_name" content="MYFREEMP3">
-<meta property="og:url" content="https://new.myfreemp3juices.cc">
-<meta property="og:description" content="MYFREEMP3 â­ MY FREE MP3 Search Engine ð¥ Mp3Juices Alternatives â­ Free music download â­ Listen audio music online | Download songs on mobile.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://myfreemp3.vip/img/myfreemp3_f.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@myfreemp3">
-<meta name="twitter:title" content="MY FREE MP3 â­ Free Mp3 Downloads â­ Songs Music 320Kbps">
-<meta name="twitter:description" content="MYFREEMP3 â­ MY FREE MP3 Search Engine ð¥ Mp3Juices Alternatives â­ Free music download â­ Listen audio music online | Download songs on mobile.">
-<meta name="twitter:image" content="https://myfreemp3juices.cc/img/myfreemp3_t.png">
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
-<link rel="stylesheet" href="/css.css">
-<meta name="kadam-verification" content="kadambac7f63926cc159e13ee82d0e6e519bf" />
-<meta name="clckd" content="cd581da263f8158573f3fc98c1ec854d" />
-<meta name="tlsdk" content="89ff707236c740e7a05dfce5cb6c8752">
-<meta name="verify-admitad" content="b5cf5d96e9" />
-</head>
-<body>
-<div class="topnav">
-<a href="/"><img src="img/myfreemp3.png" width="240" height="26" alt="MY FREE MP3"></a>
-<a class="active" href="/how-to-download-mp3">How To Download MP3</a>
-<a class="active" href="https://t.me/s/myfreemp3">Telegram</a>
-<input type="text" style="width: 5px;height: 5px;" value="Mp3 Download https://myfreemp3.vip" id="myInput">
-</div>
-<div><script data-cfasync="false" async type="text/javascript" src="//brocardcored.com/tbYfzfUUpmGll/50653"></script></div>
-<div class="wrapper">
-<div class="container">
-<div class="col-xs-12">
-<div class="col-xs-12" id="player">
-<div id="jquery_jplayer_1" class="jp-jplayer"></div>
-<div id="jp_container_1" class="jp-audio" style="display: none;" data-toggle="tooltip" data-placement="bottom" data-i18n="[title]shortcuts">
-<div class="jp-controls">
-<a class="jp-play"><i class="glyphicon glyphicon-play"></i></a>
-<a class="jp-pause"><i class="glyphicon glyphicon-pause"></i></a>
-</div>
-<div class="jp-progress">
-<div class="jp-seek-bar">
-<div class="jp-play-bar">
-</div>
-</div>
-<div class="jp-details jp-current-name"></div>
-<div class="jp-details jp-current-time"></div>
-</div>
-</div>
-</div>
-<div id="player-space" style="display: none"></div>
-<div class="input-group" style="width:100%;">
-<input id="query" type="text" autocomplete="off" class="form-control" placeholder="Enter artist name or song titleâï¸Exemple: Maluma hawai" autofocus>
-<span class="input-group-btn" style="width:5%;">
-<select class="form-control" id="sort">
-<option disabled>Sort:</option>
-<option value="0">Date</option>
-<option value="2">Popular</option>
-<option value="1">Longest</option>
-</select>
-</span>
-</div>
-<span class="input-group-btn">
-<button onclick="myFunction()" class="btn btn-primary search" type="button" style="width:100%;">Search</button>
-</span>
-</div>
-</div>
-</br>
-<div class="ad" "id="ad"></div>
-<div id="result">
-<div id="loading" style="display:none" class="spinner text-center">
-<div class="rect1"></div>
-<div class="rect2"></div>
-<div class="rect3"></div>
-<div class="rect4"></div>
-<div class="rect5"></div>
-</div>
-<div class="list-group"></div>
-<div class="col-md-12 text-center">
-<button id="load-more" style="display:none;" class="btn btn-primary btn-sm">
-<span data-i18n="loadMore"></span>
-<span style="display:none;" class="spinner white text-center">
-<span class="rect1"></span>
-<span class="rect2"></span>
-<span class="rect3"></span>
-<span class="rect4"></span>
-<span class="rect5"></span>
-</span>
-</button>
-</div>
-</div>
-</div>
-<div id="footer">
-<div class="container">
-<div class="two">
-<h1>Free Mp3 Downloads</h1>
-</div>
-<p>â¤ï¸ Welcome to <strong>â­ MY FREE MP3</strong> </a>Official music tracks downloads</p>
-<p>ð´ Today, more and more Internet users prefer to listen best free music download sites. And not only listen, but also download them for <strong>free mp3</strong> 320Kbps audio format. The most diverse music, which can be previewed and <strong>download music free</strong>, is collected on the popular music portal MY FREE MP3. On the site you will not only enjoy the sounds of your favorite tunes, but also download songs without registering. If you want, you can listen your favorite songs online at any convenient time.</p>
-<div class="one">
-<h2>Free Music Download</h2>
-<p>ð´ On the MY FREE MP3 music download portal users will find new music songs to their liking genres - <i>Rock and soul, Pop, Latin, Jazz, Hip hop, Folk, Electronic, Country, Blues, Asian, African and a lot of Remixes</i>. And in order to download music that captured, you do not need to go through a tedious registration process. Moderators of the resource have opened access to all songs for portal users.
-One click - and the desired melody is already in your phone. You can easily download time-tested hits and "high-profile" novelties.</p>
-</div>
-<div class="three">
-<h3>Music Downloader</h3>
-<p>ð¶ Music Downloader makes the process of downloading music as comfortable as possible. You can download mp3 free as a separate original song and download a music collection of any artist, which of course will save a lot of time. Visit us https://myfreemp3juices.cc or https://myfreemp3.vip</p>
-</div>
-<div class="four">
-<h4>Mp3Juices</h4>
-<p>ð´ Portal MYFREEMP3 is alternatives for <strong>MP3Juices | MP3Juice | MP3 Juices | MP3 Juice</strong> musicpleer, Stafaband, mp3Clan, songspk, Mp3fusion, Gaana, Mp3-Center, Jamendo, ZingMP3, MP3XD, tubidy, Soundclick, pagalworld, Mp3box, Epitonic, BeeMp3, Mp3Raid, SongsPK, Mp3Fusion, Mp3Boo, Mp3Skull, FreeMp3Finder, LoudTronix, Audiomack, jiosaavn, mp3quack, hungama, ytmp3 cc, doremizone, mp3downloadcenter, freemp3downloadsonline, mp3download, freemusicarchive, h2mp3, go-mp3, freemp3cloud,
-flvto, lazymp3and huge media library and of course a lot English, Hindi, Spanish Songs. We are the most popular resource for DJ, it is the best choice for all music lovers, covering music of different genres and time range. You can find free music in a few seconds. It is enough only to enter the name or creative pseudonym of the musician or the collective in the search string. Before downloading, you can listen to the melody and, making sure that this is the one you were looking for, <strong>mp3 download</strong> direct to any device. All you need is going to MY FREE MP3, listen songs with an easy to use music player, download your favorite music and make sure that it's convenient and fast!</p>
-</div>
-<p><b>Free music download</b> in all world language:</p>
-<ul>
-<li> Is one of the best audio Website which provide you the mp3 search results in just of second.</li>
-<li> All search sound results are nearly matched with your query.</li>
-<li> After entering the query displays the TOP 100 mp3 songs.</li>
-<li>* We have world biggest mp3 songs free music archive, which can be download.</li>
-<li>* Top MUSIC Website for ð± MOBILE ANDROID</li>
-</ul>
-<div class="container">
-<div class="two">
-<ul>
-<li> â What are best MP3Juices Alternatives?</li>
-<li> ð Best Alternatives for MP3Juices is MYFREEMP3.VIP</li>
-<li> â Where to download mp3 songs high quality(hq)?</li>
-<li> â Where can i download songs for free?</li>
-<li> ð You can download songs on our website MYFREEMP3.VIP</li>
-<li> â What is the best free mp3 Downloader?</li>
-<li> â Which is best site to download songs?</li>
-<li> ð The best website download is MYFREEMP3.VIP</li>
-</ul>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "What are best MP3Juices Alternatives?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Best  Alternatives for MP3Juices is MYFREEMP3.VIP"
-    }
-  },{
-    "@type": "Question",
-    "name": "Where to download mp3 songs high quality(hq)?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "You can download songs on our website MYFREEMP3.VIP"
-    }
-  },{
-    "@type": "Question",
-    "name": "Where can i download songs for free?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "You can download songs on our website MYFREEMP3.VIP"
-    }
-  },{
-    "@type": "Question",
-    "name": "What is the best free mp3 Downloader?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The best website download is MYFREEMP3.VIP"
-    }
-  },{
-    "@type": "Question",
-    "name": "Which is best site to download songs?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "The best website download is MYFREEMP3.VIP"
-    }
-  }]
-}
-</script>
-</div>
-</div>
-<div class="topnav">
-<a class="active" href="https://myfreemp3juices.cc/es">ðªð¸ EspaÃ±ol</a>
-<a class="active" href="https://www.facebook.com/myfreemp3.vip/" target="_blank">Facebook</a>
-<a class="active" href="https://twitter.com/myfreemp3" target="_blank">Twitter</a>
-</div>
-</div>
-</div>
-<script id="audioTemplate" type="text/x-tmpl-mustache">
-    <li class="list-group-item">
-<span class="btn btn-primary pull-left btn-xs play" title="{{clickToPlay}}" data-i18n="[title]clickToPlay">
-    <span class="glyphicon glyphicon-play"></span>
-</span>
-<div class="btn-group pull-right badge-download">
-     <a href="#" class="btn btn-primary btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Size - Kbps</span></a>
-  <ul class="dropdown-menu">
-    <li class="divider"></li>
-    <li><a href="{{url.download.original}}" data-stream="{{url.stream}}" data-duration="{{durationSeconds}}" class="info-link" style="pointer-events:none;cursor: default;">...</span></a></li>
-  </ul>
- <a href="#" class="btn btn-primary btn-xs" aria-expanded="false"> {{duration}}</a>
-    <a onclick="window.open('{{url.download.safeurl}}','_blank');" class="btn btn-primary btn-xs ">ð»Downloadð»</a>
-</div>
-    <a class="name" title="{{clickToDownload}}" data-i18n="[title]clickToDownload" data-src="{{url.stream}}" href="{{url.download.original}}">
-</a>
-  <a id="navi" href="#"> {{artist}}</a> - <a id="navi" href="#"> {{title}} </a>
-  <a style="color:#4267B2" href="https://t.me/myfreemp3" target="_blank">Telegram</a>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    </li>
+  <meta name="robots" content="index, follow">
+
+  <title>Free Online Video Downloader - SaveFrom.net</title>
+  <meta name="description" content="Download videos from popular platforms with SaveFrom.net, the leading free online video downloader. Easily save videos in various formats and resolutions. Start downloading now!">
+    <meta property="og:type" content="website" />
+  <meta property="og:title" content="Free Online Video Downloader - SaveFrom.net" />
+  <meta property="og:description" content="Download videos from popular platforms with SaveFrom.net, the leading free online video downloader. Easily save videos in various formats and resolutions. Start downloading now!" />
+  <meta property="og:image" content="https://en.savefrom.net/img/extension/icon_128_2.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script>
+    document.documentElement.className +=
+    (("ontouchstart" in document.documentElement) ? ' touch' : ' no-touch');
+  </script>
+  <link rel="preload" href="/font/fonts.css" as="style">
+  <link rel="stylesheet" href="/font/fonts.css" media="print" onload="this.media='all'" >
+
+      <link rel="stylesheet" href="//sfstatic.net/build/css/styles.df2a29d6.css">
+  
+  <script src="//sfstatic.net/js/libs/jquery-3.6.0.min.js"></script>
+  <script>window.jQuery || document.write('<script src="/js/libs/jquery-3.6.0.min.js"><\/script>')</script>
+  <script src="//sfstatic.net/build/js/runtime.9cab06ae.js"></script><script src="//sfstatic.net/build/js/vendor.eccfaf10.js"></script><script src="//sfstatic.net/build/js/scripts.be37b045.js"></script>  <link rel="manifest" href="/manifest.json">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="image_src" href="/img/icon_100.png">
+
+  <script>
+    var _cdnUrl = "//sfstatic.net/";
+    var _isProd = 1;
+  </script>
+
+
+<script>
+  (function(){
+    initSfJs("en",".savefrom.net","rek5.savefrom.net",true,"",["sf-android","televzr","android-light","rd_documents","sf-proxy"],"","\/\/sfstatic.net\/",false,["ar","de","en","es","fr","hi","id","it","ja","ko","pl","pt","ro","ru","th","tr","uk","vi","zh"],false);
+
+    
+    
+    _sf.workerHost = "worker.savefrom.net";
+    sfHelperConfig = {"vid":{"default":300,"cookieName":"vid"},"cookie":"browser_ext","setup":{"os":{"windows":{"name":"Windows","isStore":false,"installAction":"download","updateAction":"update","minVersion":5.1,"minVersionString":"XP","distribution":[{"lang":[],"browser":["Chrome","Yandex"],"country":["ru"],"excludeLang":[],"excludeCountry":[],"excludeBrowser":[],"files":[{"url":"https:\/\/sf-helper.net\/dist\/2023-06-08\/SF-Helper.exe","sample":100}]},{"lang":[],"browser":["Chrome","Yandex"],"country":[],"excludeLang":[],"excludeCountry":["ru"],"excludeBrowser":[],"files":[{"url":"https:\/\/sf-helper.net\/dist\/2023-06-08\/SF-Helper.exe","sample":100}]}]}},"browser":{"chrome":{"name":"Google Chrome","url":"\/userjs-for-google-chrome.php","isStore":false,"browserUrl":"https:\/\/www.google.com\/chrome","installAction":"inststructions","updateAction":"inststructions","desktop":true,"mobile":false},"chromium":{"name":"Chromium","url":"\/userjs-for-google-chrome.php","isStore":false,"browserUrl":"https:\/\/www.chromium.org\/","installAction":"inststructions","updateAction":"inststructions","desktop":true,"mobile":false},"firefox":{"name":"Mozilla Firefox","url":"https:\/\/addons.mozilla.org\/firefox\/addon\/savefromnet-helper\/","isStore":true,"browserUrl":"https:\/\/www.mozilla.com\/firefox\/","minVersion":24,"installAction":"install","updateAction":"update","desktop":true,"mobile":true},"opera":{"name":"Opera","url":"https:\/\/addons.opera.com\/extensions\/details\/savefromnet-helper\/","isStore":true,"browserUrl":"https:\/\/www.opera.com\/download\/","installAction":"install","updateAction":"update","desktop":true,"mobile":false},"safari":{"name":"Safari","url":"\/helper-safari.php","isStore":false,"browserUrl":"https:\/\/www.apple.com\/safari\/","installAction":"inststructions","updateAction":"inststructions","desktop":true,"mobile":false},"yandex":{"name":"Yandex.Browser","url":"https:\/\/addons.opera.com\/extensions\/details\/savefromnet-helper\/","isStore":true,"browserUrl":"https:\/\/browser.yandex.com\/","installAction":"install","updateAction":"update","desktop":true,"mobile":true},"edge":{"name":"Edge","url":"https:\/\/microsoftedge.microsoft.com\/addons\/detail\/savefromnet-helper\/hndfjogdceachkbgioglehonpejcdhem","isStore":true,"browserUrl":"https:\/\/www.microsoft.com\/en-us\/edge","installAction":"install","updateAction":"update","desktop":true,"mobile":false}},"userjs":{"url":"https:\/\/download.sf-helper.com\/chrome\/helper.user.js","installAction":"install","updateAction":"update"}},"setupInstructions":{"imgExt":"png","thumbnailSuffix":"_t","os":{"imgExt":"png","thumbnailSuffix":"_t","os":{"windows":{"imgLang":["en","ru"],"steps":{"default":[{"img":"setup_start","imgLang":["en","ru"],"imgExt":"png","thumbnailSuffix":"_t","text":"default_1"},{"img":"setup_1_step","text":"default_2"}],"chrome":[{"img":"chrome_download","text":"chrome_1"}],"chromium":[{"img":"chrome_download","text":"chrome_1"}],"firefox":[{"img":"firefox_download","text":"firefox_1"},{"img":"firefox_download_button","text":"firefox_2"}],"opera":[{"img":"opera_webkit_download_list","text":"opera-webkit_1"}],"safari":[{"img":"safari_download","text":"safari_1"}],"yandex":[{"img":"yandex_download_button","text":"yandex_1"}]}}}}}};
+    _sf.helper = new sfHelper(sfHelperConfig, _sf.browser, _sf.os, _sf.isMobile, _sf.country);
+    _sf.helper.setOsDefaultUrlParameter('uid', _sf.stats.uid);
+
+    apkConfig = {"versions":{"stable":{"url":"https:\/\/sfn.page.link\/install","version":"2.3.7 (2241)"}},"distribution":[{"lang":[],"country":[],"excludeLang":[],"excludeCountry":[],"files":[{"url":"https:\/\/sfn.page.link\/install","version":"2.3.7 (2241)","sample":100}]},{"lang":[],"country":[],"excludeLang":[],"excludeCountry":[],"query":{"utm_source":"ads"},"files":[{"url":"https:\/\/sfn.page.link\/propeller","version":"2.3.7 (2241)","sample":0}]}]};
+    _sf.apk = new apkDistribution(apkConfig, _sf.country);
+    _sf.ciVersion = "d5e0e37e";
+  })();
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "MYFREEMP3",
-  "alternateName": "MY FREE MP3",
-  "url": "https://myfreemp3juices.cc",
-  "logo": "https://myfreemp3juices.cc/apple-icon-180x180.png",
-  "sameAs": [
-    "https://facebook.com/myfreemp3.vip/",
-    "https://twitter.com/myfreemp3",
-    "https://t.me/s/myfreemp3"
-  ]
-}
-</script>
-<script src="/myfreemp3juice.cc.js"></script>
-<script>(function(s,u,z,p){s.src=u,s.setAttribute('data-zone',z),p.appendChild(s);})(document.createElement('script'),'https://iclickcdn.com/tag.min.js',3606797,document.body||document.documentElement)</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YYN125EKTJ"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YZBZRGCYS9"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-YYN125EKTJ');
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','_ga');
+
+  (window.webpackJsonp=window.webpackJsonp||[]).push([[88],{2:function(e,t,a){"use strict";e.exports=window.$},303:function(e,t,a){"use strict";(function(e){var t=a(7),i=a(9),o=a(4),n=a(12),r=a(0),c=r(a(64)),s=r(a(7)),l=r(a(46)),u=r(a(28)),d=r(a(11)),h=r(a(34)),v=r(a(6)),p=["hitType","eventCategory","eventAction","eventLabel","value"],g=["hitType","page_location","page_title"];function m(e,a){var n=t(e);if(i){var r=i(e);a&&(r=r.filter((function(t){return o(e,t).enumerable}))),n.push.apply(n,r)}return n}function f(e){for(var t=1;t<arguments.length;t++){var a=null!=arguments[t]?arguments[t]:{};t%2?m(Object(a),!0).forEach((function(t){(0,d.default)(e,t,a[t])})):n?Object.defineProperties(e,n(a)):m(Object(a)).forEach((function(t){Object.defineProperty(e,t,o(a,t))}))}return e}window.gaHandler={isProd:!1,defaultTrackerName:"t0",trackers:{},trackerNameToGa4IdMap:{},trackersToSkip:{},hostReplacementRegex:null,hostDefault:"other",hostRegex:/^(?=.{1,253}\.?$)(?:(?!-|[^.]+_)[A-Za-z0-9-_]{1,62}[A-Za-z0-9_](?:\.|$)){2,}$/,hostFromUrlRegex:/^(?:https?:)?\/\/(?:[^\/]+@)?([^\/:]+)/i,hostReplacement:{"youtube.com":"101","youtu.be":"101","instagram.com":"in","facebook.com":"fa","fb.com":"fa","vkontakte.com":"vk","vk.com":"vk","twitter.com":"tw","t.co":"tw","dailymotion.com":"da","dai.ly":"da","vimeo.com":"vi","soundcloud.com":"so","ok.ru":"ok","odnoklassniki.ru":"ok","tiktok.com":"ti","hotstar.com":"ho","google.com":"se","yandex.ru":"se","ya.ru":"se","bing.com":"se","bit.ly":"ls","bitly.com":"ls","savefrom.net":"sf","xvideos.com":"xxx","xnxx.com":"xxx","pornhub.com":"xxx","youporn.com":"xxx","xhamster.com":"xxx","spankbang.com":"xxx","xvideos2.com":"xxx","txxx.com":"xxx","anybunny.tv":"xxx","redtube.com":"xxx","xnxx.tv":"xxx","pornhubpremium.com":"xxx","iporntv.net":"xxx"},eventReplacement:{youtube:"101",instagram:"in",facebook:"fa",vkontakte:"vk",twitter:"tw",dailymotion:"da",vimeo:"vi",soundcloud:"so",odnoklassniki:"ok",tiktok:"ti",hotstar:"ho"},forceReplaceEvents:{"link-insert":["main-page"],"link-submit":["main-page"],show:["vidacha"],"download-click":["vidacha"]},pageveiewLocation:"",pageviewReplacement:{check:/youtube\.com|youtu\.be/i,regex:/(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*?[?&]v=)|youtu\.be\/)([^"&?\/\s]{11})/gi,to:"101"},ga3FieldsToGa4Map:{name:"name",sampleRate:null,language:"language",location:"page_location",title:"page_title",referrer:"page_referrer",sendPageview:"send_page_view",screenResolution:"screen_resolution",userId:"user_id",allowAdFeatures:"allow_google_signals",cookiePath:"cookie_path",cookieDomain:"cookie_domain",cookieExpires:"cookie_expires",cookieName:"cookie_prefix",cookieUpdate:"cookie_update",cookieFlags:"cookie_flags",allowLinker:"linker",contentGroup:"content_group",anonymizeIp:null,customTask:null,siteSpeedSampleRate:null,campaignSource:null,campaignMedium:null,campaignName:null,hitCallback:null},stringToArray:function(e,t){t=t||";";var a=new RegExp(t+"+$");return(e=e.replace(a,"")).split(t)},checkTracker:function(e){if(Array.isArray(e)&&e.length>=2){var t=this.getTrackerNameByCommand(e[0]),a=t.trackerName,i=t.command;if(a&&!this.trackers[a]&&!this.trackerNameToGa4IdMap[a])if(_sf.gaTrackers[a])if(_sf.gaTrackers[a].id){delete this.trackersToSkip[a];var o=_sf.gaTrackers[a].parameters||{};ga("create",_sf.gaTrackers[a].id,"savefrom.net",a,o),_sf.gaTrackers[a].sendPageview&&ga(a+".send","pageview")}else this.trackersToSkip[a]=!0;else e[0]=i;return!0}return!1},addTracker:function(e,t){var a=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};this.trackers[e]={id:t,parameters:a,isGa4:this.isGa4Resource(t)}},track:function(e){"string"==typeof e&&(e=this.stringToArray(e)),this.checkTracker(e)&&ga.apply(null,e)},trackNode:function(t,a){a=a||"data-ga-event";var i=e(t).attr(a);i&&this.track(i)},getTrackerNameByCommand:function(e){var t=e.split(".",2),a="",i="";return 1===t.length?i=e:(a=t[0],i=t[1]),{trackerName:a,command:i}},filterPayload:function(e){var t=this;return e[1]?"object"===(0,v.default)(e[1])?("event"===e[1].hitType&&(this.isEventRequireReplacement(e[1].category,e[1].action)?e[1].label=this.replaceEventField(e[1].label,!0):["eventCategory","eventAction","eventLabel"].forEach((function(a){e[1][a]&&(e[1][a]=t.replaceEventField(e[1][a]))}))),e):("event"===e[1]&&(this.isEventRequireReplacement(e[2],e[3])?e[4]=this.replaceEventField(e[4],!0):[2,3,4].forEach((function(a){e[a]&&(e[a]=t.replaceEventField(e[a]))}))),e):e},filterGa4Payload:function(e){var t=(0,h.default)(e,3),a=t[1],i=t[2],o=i.event_category,n=i.event_label;return this.isEventRequireReplacement(o,a)?e[2].event_label=this.replaceEventField(n,!0):(e[1]=this.replaceEventField(a),o&&(e[2].event_category=this.replaceEventField(o)),n&&(e[2].event_label=this.replaceEventField(n))),e},getEventOrPageviewByPayload:function(e){if("object"===(0,v.default)(e[1])){if("event"===e[1].hitType||"pageview"===e[1].hitType)return e[1];throw new Error("Invalid payload")}if("event"===e[1]){var t=(0,h.default)(e,6);return f({hitType:t[1],eventCategory:t[2],eventAction:t[3],eventLabel:t[4]},t[5])}if("pageview"===e[1]){var a=(0,h.default)(e,4);return f({hitType:a[1],location:a[2]},a[3])}throw new Error("Invalid payload")},isEventRequireReplacement:function(e,t){return!(!e||!t)&&!!(this.forceReplaceEvents[t]&&this.forceReplaceEvents[t].indexOf(e)>-1)},getHostReplacementRegex:function(){if(this.hostReplacementRegex)return this.hostReplacementRegex;var e=(0,s.default)(this.hostReplacement);return e=e.join("|").replace(/\./g,"\\."),this.hostReplacementRegex=new RegExp("^(?:.+[/.@ ])?(".concat(e,")(?:[^w].*|$)"),"i"),this.hostReplacementRegex},getHostnameFromUrl:function(e){var t=e.match(this.hostFromUrlRegex);return t?t[1]:""},replaceEventField:function(e,t){if(!e||"string"!=typeof e)return e;if(e in this.eventReplacement)return this.eventReplacement[e];if(-1===e.indexOf("."))return e;if(this.hostRegex.test(e))return this.getEventFieldIdByHost(e);var a=this.getHostnameFromUrl(e);return a?this.getEventFieldIdByHost(a):t?this.getEventFieldIdByHost(e):e},getEventFieldIdByHost:function(e){var t=this;if(!e)return e;var a=this.getHostReplacementRegex(),i=e.replace(a,(function(e,a){return t.hostReplacement[a]}));return i!=e?i:this.hostDefault},setPageviewLocation:function(){this.checkLocation()||(this.pageveiewLocation=this.buildLocation())},checkLocation:function(){if(!document.location)return!0;var e=document.location.pathname||"";if(e&&this.pageviewReplacement.check.test(e))return!1;var t=document.location.search||"";return!t||!this.pageviewReplacement.check.test(t)},buildLocation:function(){var e=this,t=document.location.pathname||"";"/"!=t.charAt(0)&&(t="/"+t),t=t.replace(this.pageviewReplacement.regex,this.pageviewReplacement.to);var a=document.location.search||"";if(a&&(a=a.replace(this.pageviewReplacement.regex,this.pageviewReplacement.to),"URLSearchParams"in window)){var i=new URLSearchParams(a);i.forEach((function(t,o){e.pageviewReplacement.check.test(t)&&(i.set(o,t.replace(e.pageviewReplacement.regex,e.pageviewReplacement.to)),a=i.toString())}))}var o=document.location.protocol+"//"+document.location.hostname+t+a,n=document.location.hash||"";if(n){n=n.split(/[?&#]+/);for(var r=[],c=["utm_id","utm_campaign","utm_source","utm_medium","utm_term","utm_content","gclid","dclid","gclsrc"],s=0;s<n.length;++s)for(var l=0;l<c.length;l++)if(0===n[s].indexOf(c[l])){r.push(n[s]);break}r&&(o+="#"+r.join("&"))}return o},isGa4Resource:function(e){return e&&0===e.indexOf("G-")},isGa4Tracker:function(e){return this.trackers[e]?!!this.trackers[e].isGa4:!!this.trackerNameToGa4IdMap[e]},getGa4TrackerConfig:function(e){return this.trackers[e]?this.trackers[e]:this.trackerNameToGa4IdMap[e]?this.trackers[this.trackerNameToGa4IdMap[e]]:null},execGa:function(e){var t="",a=this.getTrackerNameByCommand(e[0]),i=a.trackerName,o=a.command;if("create"===o){var n=e[1],r=this.defaultTrackerName,c={};if(e[3]&&("object"===(0,v.default)(e[3])?(r=e[3].name||r,c=e[3]):"object"===(0,v.default)(e[4])&&(r=e[3],c=e[4])),this.isGa4Resource(n))return this.execGtag(["config",n,f({name:r,cookie_domain:e[2]},this.convertGa3FieldsToGa4(c))]);t=r,c.cookieDomain=e[2],this.addTracker(r,n,c)}else if("send"===o){this.checkTracker(e);var s=i||this.defaultTrackerName;if(this.isGa4Tracker(s))return this.sendGa3EventOrPageviewToGa4(s,e);if(this.trackersToSkip[s])return void(this.isProd||console.log("SKIP GA stats: "+(0,l.default)(e)));this.filterPayload(e)}else if("set"===o){this.checkTracker(e);var u=i||this.defaultTrackerName;if(this.isGa4Tracker(u))return this.setGa3DataToGa4(u,e);if(this.trackersToSkip[u])return void(this.isProd||console.log("SKIP GA stats: "+(0,l.default)(e)))}else this.checkTracker(e);this.isProd?window._ga.apply(window,e):(console.log("GA stats: "+(0,l.default)(e)),"create"!==e[0]&&"string"==typeof e[0]||window._ga.apply(window,e)),t&&this.pageveiewLocation&&ga(t+".set","location",this.pageveiewLocation)},execGtag:function(e){if("config"===e[0]){var t=e[1],a=e[2]||{};this.trackers[t]?this.checkTracker(e):(this.pageveiewLocation&&(a.page_location=this.pageveiewLocation),a.name&&(this.trackerNameToGa4IdMap[a.name]=t),this.addTracker(t,t,a))}else this.checkTracker(e);"event"===e[0]&&this.filterGa4Payload(e),this.isProd||console.log("GTAG stats: "+(0,l.default)(e)),window.gtag.apply(window,e)},convertGa3FieldsToGa4:function(e){var t=this,a={};return(0,s.default)(e).forEach((function(i){i in t.ga3FieldsToGa4Map?t.ga3FieldsToGa4Map[i]&&(a[t.ga3FieldsToGa4Map[i]]=e[i]):a[i]=e[i]})),a},sendGa3EventOrPageviewToGa4:function(e,t){var a=this.getEventOrPageviewByPayload(t);return"pageview"===a.hitType?this.sendGa3PageviewToGa4(e,a):this.sendGa3EventToGa4(e,a)},sendGa3EventToGa4:function(e,t){var a,i=this.trackerNameToGa4IdMap[e]||(null===(a=this.trackers[e])||void 0===a?void 0:a.id);if(i){var o=this.convertGa3FieldsToGa4(t),n=(o.hitType,o.eventCategory),r=o.eventAction,s=o.eventLabel,l=o.value,u=(0,c.default)(o,p);r&&this.execGtag(["event",r,f(f({event_category:n,event_label:s,value:l},u),{},{send_to:i})])}else console.error("Invalid tracker name in event: ",e)},sendGa3PageviewToGa4:function(e,t){var a,i=this.trackerNameToGa4IdMap[e]||(null===(a=this.trackers[e])||void 0===a?void 0:a.id),o=this.getGa4TrackerConfig(e);if(i&&o){var n=this.convertGa3FieldsToGa4(t),r=(n.hitType,n.page_location),s=void 0===r?"":r,l=n.page_title,u=void 0===l?document.title:l,d=(0,c.default)(n,g);(!1===o.sendPageview||s)&&this.execGtag(["event","page_view",f(f({page_title:u,page_location:s||this.pageveiewLocation||document.location.href||""},d),{},{send_to:i})])}else console.error("Invalid tracker name in pageview: ",e)},setGa3DataToGa4:function(e,t){var a,i=this.trackerNameToGa4IdMap[e]||(null===(a=this.trackers[e])||void 0===a?void 0:a.id);if(i){var o=(0,h.default)(t,3),n=o[1],r=o[2],c={};c[n]=r,this.execGtag(["config",i,c])}else console.error("Invalid tracker name in set: ",e)},getGa4Cid:function(e){var t,a=this.trackerNameToGa4IdMap[e]||(null===(t=this.trackers[e])||void 0===t?void 0:t.id);return new u.default((function(e){window.gtag("get",a,"client_id",e)}))}}}).call(this,a(2))}},[[303,1,0]]]);  window.gaHandler.isProd = true;
+  window.gaHandler.setPageviewLocation();
+
+  window.ga = function() {
+    window.gaHandler.execGa(Array.prototype.slice.call(arguments, 0));
+  };
+
+  window._gtag = function() {
+    window.gaHandler.execGtag(Array.prototype.slice.call(arguments, 0));
+  }
+
+  if (_sf.app) {
+    ga('create', 'UA-156919089-8', 'savefrom.net', {'userId': _sf.stats.uid});
+    ga('set', 'dimension1', _sf.app);
+    _sf.stats.basicMetricsTracking['t0'] = {events: ['all']};
+    ga('require', 'displayfeatures');
+
+          ga('send', 'pageview');
+      }
+  else {
+    _gtag('config', 'G-YZBZRGCYS9', {cookie_domain: 'savefrom.net', name: 't0', user_properties: {id: _sf.stats.uid}});
+      }
+
+  ga('create', 'UA-7055055-78', 'auto', {'name': 'helper', 'userId': _sf.stats.uid})
 </script>
-<script data-cfasync="false" type="text/javascript" src="//jeeryzest.com/tG789Y7QSWkGgs7M/50653"></script>
-<script> 
-function show(selector) {
-    if (window.G_50653_API && typeof window.G_50653_API.show === 'function') {
-          window.G_50653_API.show(selector); 
-    } else {
-          setTimeout(() => show(selector), 50);
+<link rel="alternate" hreflang="ar" href="https://ar.savefrom.net/246/">
+<link rel="alternate" hreflang="de" href="https://de.savefrom.net/187/">
+<link rel="alternate" hreflang="x-default" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="en" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="es" href="https://es.savefrom.net/258JB/">
+<link rel="alternate" hreflang="fr" href="https://fr.savefrom.net/348/">
+<link rel="alternate" hreflang="hi" href="https://hi.savefrom.net/207/">
+<link rel="alternate" hreflang="id" href="https://id.savefrom.net/247/">
+<link rel="alternate" hreflang="it" href="https://it2.savefrom.net/82/">
+<link rel="alternate" hreflang="ja" href="https://ja.savefrom.net/189/">
+<link rel="alternate" hreflang="ko" href="https://ko.savefrom.net/222/">
+<link rel="alternate" hreflang="pl" href="https://pl.savefrom.net/173/">
+<link rel="alternate" hreflang="pt" href="https://pt1.savefrom.net/59/">
+<link rel="alternate" hreflang="ro" href="https://ro.savefrom.net/157/">
+<link rel="alternate" hreflang="ru" href="https://ru.savefrom.net/240/">
+<link rel="alternate" hreflang="th" href="https://th.savefrom.net/233/">
+<link rel="alternate" hreflang="tr" href="https://tr.savefrom.net/238/">
+<link rel="alternate" hreflang="uk" href="https://uk.savefrom.net/217/">
+<link rel="alternate" hreflang="vi" href="https://vi.savefrom.net/243/">
+<link rel="alternate" hreflang="zh" href="https://zh.savefrom.net/226/">
+<link rel="alternate" hreflang="en-in" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="en-ph" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="en-pk" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="en-bd" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="en-id" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="en-my" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="hi-in" href="https://hi.savefrom.net/207/">
+<link rel="alternate" hreflang="id-id" href="https://id.savefrom.net/247/">
+<link rel="alternate" hreflang="id-my" href="https://id.savefrom.net/247/">
+<link rel="alternate" hreflang="ro-ro" href="https://ro.savefrom.net/157/">
+<link rel="alternate" hreflang="ru-ro" href="https://ru.savefrom.net/240/">
+<link rel="alternate" hreflang="ru-az" href="https://ru.savefrom.net/240/">
+<link rel="alternate" hreflang="en-br" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="pt-br" href="https://pt1.savefrom.net/59/">
+<link rel="alternate" hreflang="es-co" href="https://es.savefrom.net/258JB/">
+<link rel="alternate" hreflang="en-co" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="es-mx" href="https://es.savefrom.net/258JB/">
+<link rel="alternate" hreflang="en-mx" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="es-pe" href="https://es.savefrom.net/258JB/">
+<link rel="alternate" hreflang="en-pe" href="https://en.savefrom.net/391GA/">
+<link rel="alternate" hreflang="zh-tw" href="https://zh.savefrom.net/226/">
+<link rel="alternate" hreflang="zh-cn" href="https://zh.savefrom.net/226/">
+<link rel="canonical" href="https://en.savefrom.net/391GA/">
+
+  <script>
+    if(top!=self && (!document.referrer || document.referrer.search(/^https?:\/\/(www\.google\.com\/analytics\/web\/|metrika.yandex.ru\/|webvisor\.com\/)/i) !== 0)) {
+      top.location=location;
     }
+
+    if (_sf.hash && _sf.hash.utm_campaign && _sf.hash.url && _sf.hash.utm_campaign.indexOf('ssyoutube.com') > -1) {
+      _sf.ssyoutube = true;
+      _sf.channel.push('ssyoutube');
+      if (_sf.hash.url == 'http://youtube.com/watch?v=AEIVhBS6baE') {
+        location.href = '/404.php';
+      }
+
+    }
+    else {
+              _sf.channel.push('main');
+          }
+
+    _sf.stats.yaMetrikaEnabled = false;
+    if (_sf.lang == 'de' || _sf.lang == 'es') {
+      _sf.stats.yaMetrikaEnabled = true;
+    }
+
+    $(function () {
+      (function (name, lang, domain) {
+        if (window.sf && name && lang && domain) {
+          if (lang != sf.cookie.get(name)) {
+            sf.cookie.set(name, lang, 365, domain);
+          }
+        }
+      })('lang', 'en', 'COOKIE_DOMAIN');
+    });
+  </script>
+
+</head>
+<body class="">
+
+  <!--Header-->
+  <header class="header header_v2">
+    <script>
+      (function () {
+        if (!window._sf || !window.jQuery) {
+          var div = document.createElement('div');
+          var jsErrorBlock = '<div class="wrapper"><div class="b-info b-js-error"><p class="t-sf-logo">Something went wrong. Please, try again.</p><button class="btn_no-border green-btn-3 js-refresh-page" type="button" onClick="window.location.reload();">Refresh</button></div></div>';
+
+          div.innerHTML = jsErrorBlock;
+
+          window.onload = function() {
+            var errorPlacement = document.querySelector('header');
+            var parentErrorPlacement = errorPlacement.parentNode;
+
+            parentErrorPlacement.insertBefore(div, errorPlacement.nextSibling);
+
+            _ga('create', 'UA-7055055-62', 'savefrom.net', 'jsError');
+            _ga('jsError.send', 'event', 'main-page', 'error-window-show', 'TRUE');
+            _ga('jsError.send', 'event', 'main-page', '_sf-ind-error', '');
+          }
+        }
+
+        if (!window.jQuery) {
+          _ga('jsError.send', 'event', 'main-page', 'jquery-error', '');
+        }
+      })();
+    </script>
+
+    <div class="page-width-inner g-row_inline">
+
+      <div class="header__left g-col c3">
+        <span class="menu-btn menu-btn_v2"></span>
+        <a name="logo" class="logo" >Savefrom.net</a>
+      </div>
+              <div id="nav_top" class="g-col c9">
+          <div class="nav-top-2 right">
+            <a href="/19OD/user.php?vid=387" class="nav-top-2__item">Install</a><a href="/17/webmaster.php" class="nav-top-2__item">For webmasters</a><a href="/15/faq.php" class="nav-top-2__item">Help</a>          </div>
+        </div>
+          </div>
+  </header>
+        
+<div id="main" class="main-block main-block_v2">
+  <noscript>
+    <div class="wrapper"><p class="javascript-error">SaveFrom.net uses Javascript to display some content. Please enable Javascript in your browser and reload this page.</p></div>
+  </noscript>
+<script>
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{2:function(e,r,n){"use strict";e.exports=window.$},301:function(e,r,n){"use strict";(function(e){var r=n(0)(n(27));window.extensionVersion={url:"//download.sf-helper.com/",config:{chrome:{url:"chrome/updates-3.xml",dataType:"xml",fn:function(e,r,n){if(n.responseXML){var t=n.responseXML.querySelector('app[appid="mdpljndcmbeikfnlflcggaipgnhiedbl"] > updatecheck');if(t)return t.getAttribute("version")}return null}},firefox:{url:"mozilla/updates.json",dataType:"json",fn:function(e,r,n){var t=["addons","helper-sig@savefrom.net","updates",0];if(e)for(var o=0,a=t.length;o<a;o++){if(!e[t[o]])return null;e=e[t[o]]}return e&&e.version?e.version:null}},opera:{url:"opera/update.json",dataType:"json",fn:function(e,r,n){return e&&e.version?e.version:null}},operaChromium:{url:"opera/update.json",dataType:"json",fn:function(e,r,n){return e&&e.version?e.version:null}},safari:{url:"safari/update.plist",dataType:"xml",fn:function(e,r,n){if(n.responseText){var t=n.responseText.search(/\<key\>\s*CFBundleShortVersionString\s*\<\/key>/i);if(t>0){var o=n.responseText.substr(t).match(/\<string\>\s*([\d\.]+)/i);if(o&&o[1])return o[1]}}return null}},userjs:{url:"chrome/helper.meta.js",dataType:"text",fn:function(e,r,n){if(n.responseText){var t=n.responseText.match(/@version\s+([\d\.]+)/i);if(t&&t[1])return t[1]}}}},formatBrowserName:function(e){var r={chromelite:"chrome",chameleon:"chrome",chromium:"chrome",ff:"firefox","ff-sf":"firefox","opera-chromium":"operaChromium","opera-webkit":"operaChromium",yandex:"operaChromium"};return r[e]?r[e]:0===e.indexOf("userjs-")?"userjs":e},getLast:function(r,n){if(!r)return n(null,r,t);var t=this.formatBrowserName(r.toLowerCase()),o=this.config[t];if(!o)return n(null,r,t);e.ajax({url:this.url+o.url,data:{rnd:(new Date).getTime()+Math.random()},dataType:o.dataType,crossDomain:!0}).then((function(e,a,i){var s=o.fn(e,a,i),u=i.getResponseHeader("Last-Modified");n(s,r,t,u)})).catch((function(e){return _sf.debug&&console.error(e)}))},stringToArray:function(e){var n=e.match(/^(\d+)(?:\.(\d+))?/);if(!n)return null;var t=[(0,r.default)(n[1])];return n.length>2&&t.push((0,r.default)(n[2])),t},compare:function(e,r){return e=this.stringToArray(e),r=this.stringToArray(r),null===e?null===r?0:-1:null===r?1:e[0]!=r[0]?e[0]<r[0]?-1:1:1==e.length?1==r.length?0:-1:1==r.length?1:e[1]!=r[1]?e[1]<r[1]?-1:1:0}}}).call(this,n(2))}},[[301,1,0]]]);
+$(document).on('extension-query', function(event){
+  try
+  {
+    var node = event.target;
+    if (!node || node.nodeType != Node.TEXT_NODE)
+      return;
+
+    var json = $.parseJSON(node.nodeValue);
+    node.parentNode.removeChild(node);
+
+    switch(json.msg)
+    {
+      case 'setBrowserExtension':
+        setBrowserExtension(json.params);
+        break;
+
+      case 'replaceAjaxResult':
+        var btn = document.getElementById(json.btn);
+        sf.result.replaceAjaxResult(json.data, true, true, btn);
+        break;
+
+      case 'showVideoResult':
+        sf.finishRequest(true);
+        sf.videoResult.show(json.video);
+        break;
+    }
+  }
+  catch(err){}
+}, false);
+
+
+function setBrowserExtension(params)
+{
+  if(!params || !params.id || !params.version)
+    return;
+
+  sf.extension.id = params.id;
+  sf.extension.version = params.version;
+  _sf.helper.setExtensionParameters(params);
+
+  var msgCookieName = 'browser_ext_update_msg',
+      cookieName = 'browser_ext',
+      cookieValue = params.id + ' ' + params.version;
+
+  if(!params.enable || params.enable == '0')
+    cookieValue += ' - disabled';
+
+  window.setTimeout(function(){
+    if(window.ga)
+      window.ga('set', 'dimension2', cookieValue);
+  }, 1000);
+
+  if(!sf.cookie.get(cookieName))
+  {
+    sf.cookie.set(cookieName, cookieValue, 1, '.savefrom.net');
+  }
+
+  function setCookie() {
+    sf.cookie.set(msgCookieName, '1', 1, '.savefrom.net');
+  }
+
+  if (sf.extension.id != 'chameleon' && sf.extension.version && !sf.cookie.get(msgCookieName)) {
+    extensionVersion.getLast(params.id, function (version, browser, browserName, date) {
+      if(!version)
+        return;
+
+      if(extensionVersion.compare(version, sf.extension.version) > 0)
+      {
+        if(date)
+        {
+          date = new Date(date);
+          if(date && date.getFullYear() > 2012)
+          {
+            var now = new Date();
+            if(now.getTime() - date.getTime() < 86400000)
+              return;
+          }
+        }
+
+        var updateUrl = '/user.php?utm_source=savefrom&utm_medium=topline&utm_campaign=update_extension';
+        var updateBtn = '<a href="' + updateUrl + '" class="button" target="_blank">Update</a>';
+        var msg = "Your version of &quot;SaveFrom.net helper&quot; browser extension is outdated and it could work improperly {button}";
+        msg = msg.replace(/\{version\}/i, sf.extension.version);
+        msg = msg.replace(/\{button\}/i, ' &nbsp; ' + updateBtn);
+        msg = '<img src="/img/extension/icon_24.png" alt=""> &nbsp; ' + msg;
+
+        setTimeout(function(){
+          if(window.ga)
+            ga('send', 'event', 'topline', 'show', 'update_extension');
+
+          showMessage(msg, setCookie);
+        }, 2000);
+      }
+    });
+  }
 }
-show('.ad');
 </script>
-<script type="text/javascript" src="https://s.skimresources.com/js/218627X1699684.skimlinks.js"></script>
+<script src="//sfstatic.net/build/js/savefrom.51f9566c.js"></script><script>
+  (function () {
+    if (!window.sf || !window.jQuery) {
+      var div = document.createElement('div');
+      var jsErrorBlock = '<div class="wrapper"><div class="b-info b-js-error"><p class="t-sf-logo">Something went wrong. Please, try again.</p><button class="btn_no-border green-btn-3 js-refresh-page" type="button" onClick="window.location.reload();">Refresh</button></div></div>';
+
+      div.innerHTML = jsErrorBlock;
+
+      window.onload = function() {
+        var errorPlacement = document.querySelector('.downloader-2-part2');
+        var parentErrorPlacement = errorPlacement.parentNode;
+
+        parentErrorPlacement.insertBefore(div, errorPlacement.nextSibling);
+
+        _ga('create', 'UA-7055055-62', 'savefrom.net', 'jsError');
+        _ga('jsError.send', 'event', 'main-page', 'error-window-show', 'TRUE');
+        _ga('jsError.send', 'event', 'main-page', 'sf-ind-error', '');
+      }
+    }
+
+    if (!window.jQuery) {
+      _ga('jsError.send', 'event', 'main-page', 'jquery-error', '');
+    }
+  })();
+</script>
+<script>
+  sf.setLanguage({"lang":"en","wait":"Please wait","result":"Result","download":"Download","startDownload":"Start download","copy":"Copy","playerPlay":"Play","playerStop":"Stop","link":"Link","title":"Title","file":"File","size":"Size","hosting":"Hosting","information":"Information","source":"Source","duration":"Duration","more":"More","multiMore":"Find more links","linkNotFound":"The download link not found.","pluralSeconds":["second","seconds"],"pluralParts":["part","parts"],"findMediaLinks":"Find links to media files","fileInfoTitle":"Display file information","copyLinkSuccess":"The download link is copied to the clipboard.","copyLinkFail":"Unable to copy the link to the clipboard.","copyLinksSuccess":"The download links are copied to the clipboard.","copyLinksFail":"Unable to copy the links to the clipboard.","flashPlayerRequired":"Perhaps you do not have <a href=\"https:\/\/get.adobe.com\/flashplayer\/\" rel=\"nofollow\" target=\"_blank\">Adobe Flash Player<\/a> installed.","dQueueError":"Unable to start downloading the file","dQueueContinue":"Continue downloading the remaining files?","dQueueYes":"Continue","dQueueNo":"Stop","tblHdrDownload":"Download links","tblHdrInformation":"Information","tblHdrFile":"File","tblHdrSize":"Size","error1":"Error: URL not specified.","error2":"Error: invalid URL specified.","error3":"Error: code not specified.","error4":"Please specify what to search.","error5":"Please specify where to search.","error20":"Error: %s element not found.","player_err1":"To view this video, you need to get the download links.","request_err1":"Failed to make the request. Please try again.","request_err2":"Failed to make the request.","notEnoughPoints1":"Not enough points to download this file","notEnoughPoints2":"You do not have enough points to download selected files","allSites":"all popular websites","helper_lite":"Helper","tryAnother":"Try downloading another file.","video:tryAnother":"Try downloading another video.","offer":"Install {offer} and download files from any {service} page.","video:offer":"Install {offer} and download videos from any {service} page.","errorMessages":{"page not found":"The link is invalid or the page has been deleted.","restricted access":"Unfortunately, {service} has restricted access to this page.","page without files":"We were unable to find files on this page.","video:page without files":"We were unable to find videos on this page.","private page":"Unfortunately, we cannot download files from a user's personal pages.","video:private page":"Unfortunately, we cannot download videos from a user's personal pages."},"videoDownloadIssue":"Why is the video playing instead of downloading on SaveFrom?","downloadHint":"To download a video: <b>Right Click -> Save as...<\/b> or In new window, press <b>\"CTRL + S\"<\/b> to save video.","form_preloader_text":"Processing the link to download. Stay on the page.","goBack":"Go back","submit":"Submit","captchaSuccessMessage":"The code has been verified.","captchaErrorMessage":"An error has occurred. Please try again.","installHelper":"Install SaveFrom.net helper","helperFull":"SaveFrom.net helper","installUvd":"Install Ummy Video Downloader","recommendProduct":{"helper":"We recommend you to install <a href=\"{href}\">SaveFrom.net helper extension<\/a> to download from <b>{service}<\/b> in 1 click.","televzr":"We recommend you to install <a href=\"{href}\">Televzr Downloader<\/a> to download from <b>{service}<\/b> in 1 click."}});
+  sf.linksListToken = "#__savefrom.net_links__";
+  sf.jsonToken = "#json#";
+</script>
+<script src="//sfstatic.net/build/js/mainForm.8473c371.js"></script><script>
+  
+  window.newMainForm.init({"download":"Download"}, false);
+
+  try {
+    localStorage.removeItem('video_history');
+  } catch (error) {}
+
+  $('body').one('submit', '.sf-form', function(){
+    sf.videoPlayerHTML5.loadLibraries();
+  });
+</script>
+
+<div class="downloader-block">
+  <div class="open-link-form-all-block">
+    <div class="main-form-box">
+      <div class="main-form-box-left"><div class="sk-wave">
+        <div class="sk-rect sk-rect1"></div>
+        <div class="sk-rect sk-rect2"></div>
+        <div class="sk-rect sk-rect3"></div>
+        <div class="sk-rect sk-rect4"></div>
+        <div class="sk-rect sk-rect5"></div>
+      </div>
+        <div id="link-form-old-cont">
+                  <div class="downloader-2 downloader-2-part1">
+          <!--main form-->
+          <form action="/savefrom.php" method="POST" class="sf-form link-form" onsubmit="return sf.checkForm(event);" target="sf_frame">
+            <div class="form-block">
+              <div class="l-box">
+                <div class="tarea-wrap">
+                  <input type="text" name="sf_url" value="" autofocus placeholder="Paste your video link here" onfocus="if(this.value && this.select){this.select()}">
+                  <a href="#" class="clear-btn"></a>
+                </div>
+              </div>
+              <div class="r-box">
+                <button type="submit" name="sf_submit" class="submit"></button>
+              </div>
+            </div>
+            <div class="services clearfix"></div>
+            <input type="hidden" name="new" value="2">
+            <input type="hidden" name="lang" value="en">
+                        <input type="hidden" name="app" value="">
+            <div class="terms__string">By using our service you accept our <a href="https://en.savefrom.net/34/terms.html" rel="nofollow">Terms of Service</a> and <a href="https://en.savefrom.net/139/privacy-policy.html" rel="nofollow" target="_blank">Privacy Policy</a></div>
+          </form>
+          <!--/main form-->
+
+          <iframe name="sf_frame" id="sf_frame" width="100" height="150" style="display: none;"></iframe>
+        </div>
+                      <div class="main-form__wrapper" style="visibility: hidden">
+            <div class="main-form__watch main-form__watch_show">
+              <img src="/img/main/btnPlay.svg" alt="">
+              <button class="main-form__button" type="button">How to download?</button>
+              <span>Watch the tutorial</span>
+            </div>
+            <div class="main-form__video" >
+              <video width="auto" height="auto" poster="/img/mainForm/search-panel-img.png" playsinline loop muted controls class="search-result-video">
+                <source src="/img/mainForm/search-panel-video.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+                  </div>
+      </div>
+      <div class="main-form-box-right" style="display:none"></div>
+    </div>
+  </div>
+
+  <div class="downloader-2 downloader-2-part2">
+  <div id="sf_indicator_box" style="display: none;"></div>
+
+  <div id="sf_multi_form_box"></div>
+  <div id="sf_multi_result"></div>
+  <!--result-->
+  <div id="sf_result">
+    <script src="//sfstatic.net/build/js/mainFormOutput.06a558a9.js"></script>    <script>
+      mainFormOutput("Enter the URL");
+    </script>
+  </div>
+  <!--/result-->
+
+</div>
+<div class="norton">
+  <p>Scanned by</p>
+  <img src="/img/norton.svg" >
+  <p>Norton<sup>TM</sup> Safe Web</p>
+</div>
+<div id="modal-container" class="modal-container center-popup-cont">
+  <div class="shade"></div>
+  <div class="popup-content">
+    <div class="modal-text-cont-for-js"></div>
+    <div class="close-modal close-modal-icon"></div>
+  </div>
+</div>
+
+<div id="output-dialog" class="a11y-dialog" aria-hidden="true">
+  <div class="a11y-dialog-overlay" data-a11y-dialog-hide></div>
+  <div role="document" class="a11y-dialog-content">
+    <button type="button" class="a11y-dialog-close" data-a11y-dialog-hide>&times;</button>
+    <div class="a11y-dialog-content-for-js"></div>
+  </div>
+</div>
+
+<script src="//sfstatic.net/build/js/jsTemplates.69fadd0c.js" rel="nofollow"></script>
+
+<script>
+  appendJsTemplates(
+    {"install":"Install","more":"More","ext_download_in_1_click":"Download from {{:service}} in one click","vdp_download_audio_video":"Use <a href=\"{{:href}}\" class=\"ga_track_events\" target=\"_blank\" data-ga-event=\"{{:event_attr}}\">Video&nbsp;Downloader&nbsp;Pro<\/a> to save video and audio from this page","get_televzr_banner_title":"Get Televzr app","get_televzr_banner_text":"To download from 700+ resources","get_televzr_banner_learn_more":"Learn more","ext_recommend_use_helper":"We recommend you to install <a href=\"{{:href}}\" class=\"ga_track_events bold\" target=\"_blank\" data-ga-event=\"{{:event_attr}}\">SaveFrom.net helper extension<\/a> to download from <b>{{:service}}<\/b> in&nbsp;1&nbsp;click.","ext_recommend_use_helper_ff":"Install the <a target=\"_blank\" href=\"{{:href2}}\">FireFox mobile<\/a> browser along with the <a target=\"_blank\" href=\"{{:href}}\" class=\"ga_track_events bold\" target=\"_blank\" data-ga-event=\"{{:event_attr}}\">SaveFrom.net helper extension<\/a> to download from <b>{{:service}}<\/b> in one click","ext_recommend_use_helper_yb":"Install <a target=\"_blank\" href=\"{{:href}}\" class=\"ga_track_events bold\" target=\"_blank\" data-ga-event=\"{{:event_attr}}\">Yandex Browser<\/a> with  SaveFrom.net helper extension and download from <b>{{:service}}<\/b> in&nbsp;1&nbsp;click","televzr_recommend_use_televzr":"We recommend you to install <a href=\"{{:href}}\" class=\"ga_track_events bold\" target=\"_blank\" data-ga-event=\"{{:event_attr}}\">Televzr Downloader<\/a> to download from <b>{{:service}}<\/b> in&nbsp;1&nbsp;click.","copy_link":"Copy and paste the link into your browser address bar or download manager:","copy":"Copy"}  );
+</script>
+</div>
+
+
+<script src="//sfstatic.net/build/js/basicMetricsTracking.2d50b8ee.js"></script><script src="//sfstatic.net/build/js/experimentLoader.3f0229df.js"></script>  <script type="application/ld+json">
+              {
+                "@context": "https://schema.org",
+                "@type": "VideoObject",
+                "name": "Free Online Video Downloader - SaveFrom.net",
+                "description": "Download videos from popular platforms with SaveFrom.net, the leading free online video downloader. Easily save videos in various formats and resolutions. Start downloading now!",
+                "thumbnailUrl": [
+                  "https://en.savefrom.net/img/main/howWatch.png"
+                 ],
+                "uploadDate": "2021-05-31T08:00:00+08:00",
+                "duration": "PT0M11S",
+                "contentUrl": "https://sfstatic.net/img/mainForm/search-panel-video.mp4",
+                "embedUrl": "https://en.savefrom.net/391GA/"              }
+  </script>
+<script>
+  $(function(){
+    const timeoutDuration = _sf.mobile ? 0 : 100;
+    setTimeout(function(){ window.newMainForm.setView(); }, timeoutDuration);
+  });
+</script>
+<script>
+  if (_sf.app) {
+    $('.sf-form input[name="app"]').val(_sf.app);
+  }
+  if (_sf.os.name == 'iOS' && _sf.browser.inApp) {
+    $('.sf-form').append($('<input type="hidden" name="ios_app_mode" value="1">'));
+  }
+  $('.sf-form').append($('<input type="hidden" name="country" value="' + (_sf.country || '')+ '">'));
+  $('.sf-form').append($('<input type="hidden" name="os" value="' + (_sf.os.name || '')+ '">'));
+  $('.sf-form').append($('<input type="hidden" name="browser" value="' + (_sf.browser.name || '')+ '">'));
+  $('.sf-form').append($('<input type="hidden" name="channel" value="' + (_sf.channel || '')+ '">'));
+</script>
+
+  <!--    </div>/wrapper-->
+<div class="install-now" id="js-install-now"></div>
+    <div class="wrapper wrapper-after-output">
+  <div id="ox7" class="ox7">
+  <div class="ox7-title">Advertising</div>
+  <div class="ox7-content"></div>
+</div>
+
+    <div class="site-info-tabs">
+      <h2 class="show-mobile-only">Supported resources</h2>
+      <div>
+        
+<div class="main-supported-services">
+  <div class="supported-services-link-note">
+    <img src="/img/main/lamp.png" alt="">
+    <span>Note: Click on the website name to see how to download & save files from there.</span>
+  </div>
+
+  <ul class="supported-services_v3 supported-services important-services"><li class="service-facebook_com"><a href="https://en.savefrom.net/9-how-to-download-facebook-video-217.html" class="main-favicon icon-facebook_com">facebook.com</a></li><li class="service-instagram_com"><a href="/274/download-from-instagram" class="main-favicon icon-instagram_com">instagram.com</a></li><li class="service-youtube_com"><a href="https://en.savefrom.net/1-youtube-video-downloader-533nN/" class="main-favicon icon-youtube_com">youtube.com</a></li><li class="service-twitter_com"><a href="/233/download-from-twitter" class="main-favicon icon-twitter_com">twitter.com</a></li></ul><h3>All resources</h3><div class="other-services"><ul class="supported-services_v3 supported-services"><li class="service-dailymotion_com"><a href="https://en.savefrom.net/10-how-to-download-dailymotion-video-50.html" class="main-favicon icon-dailymotion_com">dailymotion.com</a></li><li class="service-vimeo_com"><a href="https://en.savefrom.net/11-how-to-download-vimeo-video-133.html" class="main-favicon icon-vimeo_com">vimeo.com</a></li><li class="service-vk_com"><a href="https://en.savefrom.net/7-how-to-download-vk-music-videos-photos-84.html" class="main-favicon icon-vk_com">vk.com</a></li><li class="service-odnoklassniki_ru"><a href="https://en.savefrom.net/8-how-to-download-odnoklassniki-music-videos-16.html" class="main-favicon icon-odnoklassniki_ru tooltip" title="Requires SaveFrom.net helper extension">odnoklassniki.ru</a></li><li class="service-soundcloud_com"><a href="https://en.savefrom.net/12-how-to-download-soundcloud-audio-68.html" class="main-favicon icon-soundcloud_com">soundcloud.com</a></li><li class="service-tiktok_com"><a href="/189/download-from-tiktok" class="main-favicon icon-tiktok_com">tiktok.com</a></li><li class="service-reddit_com"><a href="/36/reddit-video-downloader" class="main-favicon icon-reddit_com">reddit.com</a></li><li class="service-threads"><a href="https://en.savefrom.net/22-threads-downloader.html" class="main-favicon icon-threads">Threads</a></li></ul></div></div>
+
+        <div class="how-to-use-v2">
+          <h1>Free Online Video Downloader</h1>
+
+<h2 class="top-green-border">How to Use the SaveFrom.Net Video Downloader Online?</h2>
+<p>With the SaveFrom.Net Online Video Downloader, effortlessly capture your favorite videos and music from the web without the need for extra software. Experience the convenience of online video downloading without any added complications.</p>
+<p>Whether it's videos, TV shows, or sports highlights, SaveFrom makes it easy. Just paste the video URL into the provided field and click the Download button. For an even smoother experience, try our Chrome extension tailored for easy video downloads.</p>
+
+<h2>Save Videos in High-Quality MP4 Format</h2>
+<p>Streaming videos are great when you have a high-speed internet connection. But for those moments offline, you might want a reliable solution.</p>
+<p>Our downloader lets you secure videos in crystal-clear high-definition, ready to be saved as MP4 files for your viewing pleasure.</p>
+
+<h2>Guide: How to Download Online Videos in MP4 with High Definition (HD) Quality</h2>
+<ol>
+  <li class="how-to-step-1">
+    <div class="how-to-use-middle-text">
+      <p><strong>Copy the URL</strong> of the video you want to save and paste it into the input field on the download page. Press "Enter" or click the "Download" button situated next to the input field.</p>
+    </div>
+    <picture>
+      <source type="image/webp" srcset="/img/main/steps/step-1.webp">
+      <img src="/img/main/steps/step-1.png" width="581" height="389" alt="Step 1"/>
+    </picture>
+    <span class="how-to-use-middle-arrow"></span>
+  </li>
+  <li class="how-to-step-2">
+    <div class="how-to-use-middle-text">
+      <p>Add <strong>"savefrom.net/"</strong> or <strong>"sfrom.net/"</strong> before the URL and press <strong>Enter</strong>. For example: <a href="http://sfrom.net/http://youtube.com/watch?v=u7deClndzQw" target="_blank" rel="nofollow noopener noreferrer">sfrom.net/http://youtube.com/watch?v=u7deClndzQw</a></p>
+    </div>
+    <picture class="left-picture">
+      <source type="image/webp" srcset="/img/main/steps/step-2.webp">
+      <img src="/img/main/steps/step-2.png" width="601" height="352" alt="Step 2"/>
+    </picture>
+  </li>
+  <li class="how-to-step-3">
+    <div class="how-to-use-middle-text">
+      <p>Make use of concise domain names like <strong class="green-bold">ssyoutube.com</strong>.</p>
+    </div>
+    <picture>
+      <source type="image/webp" srcset="/img/main/steps/step-3.webp">
+      <img src="/img/main/steps/step-3.png" width="582" height="344" alt="Step 3"/>
+    </picture>
+    <span class="how-to-use-middle-arrow"></span>
+  </li>
+  <li class="how-to-step-helper">
+    <div class="how-to-use-middle-text">
+      <p><strong>Install the browser addon</strong> for effortless video downloads with a single click.</p>
+      <a class="install-helper-button" href="https://en.savefrom.net/19OD/user.php" target="_top"><img src="/img/main/download.svg" width="25" height="26" alt="Download">Install Helper</a>
+    </div>
+    <picture class="left-picture">
+      <source type="image/webp" srcset="/img/main/steps/helper.webp">
+      <img src="/img/main/steps/helper.png" width="588" height="367" alt="Helper"/>
+    </picture>
+  </li>
+  <li class="how-to-step-apk">
+    <div class="how-to-use-middle-text">
+      <p><strong>Install the mobile application</strong> to rapidly download videos with a single click.</p>
+    </div>
+    <div class="how-to-step-apk-top">
+      <a class="install-apk-button" href="https://sfn.page.link/install" target="_top"><img src="/img/main/android.svg" width="26" height="30" alt="Download">Download App</a>
+      <picture class="left-picture">
+        <source type="image/webp" srcset="/img/main/steps/apk.webp">
+        <img src="/img/main/steps/apk.png" width="363" height="188" alt="APK"/>
+      </picture>
+    </div>
+  </li>
+</ol>
+<div class="how-to-use-bottom">
+  <div class="how-to-use-bottom-text">
+    <h2>Supported Video Quality - Download Videos in Various Resolutions</h2>
+
+    <p>Our downloader supports a wide range of video qualities, including MP4 format, SD, HD, FullHD, 2K, and 4K. The available video quality depends on the original upload. If the author uploaded the video in 1080p, you can save it in the same high definition quality.</p>
+  </div>
+  <img src="/img/main/4k.svg" width="354" height="216" alt="">
+  </div>
+<div class="how-to-use-bottom mb-100">
+  <div class="how-to-use-bottom-text">
+    <h2>Compatible Browsers</h2>
+
+    <p>Our online video downloader works seamlessly with popular browsers such as Google Chrome, Mozilla Firefox, Safari, Opera, and all Chromium-based browsers.</p>
+  </div>
+  <img src="/img/main/video.svg" width="354" height="217" alt="">
+</div>
+<style>
+  .main-block {
+    padding-bottom: 0px;
+  }
+  .open-link-form-new #link-form-old-cont {
+    margin-bottom: 40px;
+  }
+  #main > div.downloader-block > div.downloader-2.downloader-2-part2 > h1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #434343;
+    letter-spacing: -0.01em;
+    padding-bottom: 20px;
+  }
+  .main-block .wrapper.wrapper-after-output {
+    padding-top: 0;
+  }
+  .site-info-tabs {
+    width: 940px;
+  }
+  .site-info-tabs .show-mobile-only {
+    display: none;
+  }
+  .site-info-tabs h2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 41px;
+    text-align: center;
+    color: #000000;
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  .site-info-tabs h3 {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 23px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+  @media screen and (max-width:979px) {
+    .main-block .wrapper {
+      max-width: calc(100% - 28px);
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+    .site-info-tabs {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 720px) {
+    .site-info-tabs h3 {
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .site-info-tabs h2 {
+      font-family: 'Roboto', sans-serif;
+      margin-top: 40px;
+      margin-bottom: 24px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 22px;
+      line-height: 26px;
+      text-align: left;
+      color: #000000;
+    }
+  }
+  @media screen and (max-width:580px) {
+    ul.supported-services li {
+      width: 40%;
+    }
+  }
+</style>
+
+        </div>
+      </div>
+    </div>
+
+    </div>
+    <!--/content-->      <!-- verify-admitad: "ef27e00c36" -->
+</div> <!--/main-->
+
+
+<!--Footer-->
+<footer class="footer_v2">
+  <div class="wrapper">
+    <div class="lang-box" tabindex="2" style="z-index:1000;" translate="no">
+      <ul class="lang">
+        
+<script src="//sfstatic.net/build/js/lang_selector.7d149b29.js"></script>
+<li><a href="https://ar.savefrom.net/246/" class="lang-ar">العربية</a></li><li><a href="https://de.savefrom.net/187/" class="lang-de">Deutsch</a></li><li class="active"><span class="lang-en">English</span></li><li><a href="https://es.savefrom.net/258JB/" class="lang-es">Español</a></li><li><a href="https://fr.savefrom.net/348/" class="lang-fr">‪Français</a></li><li><a href="https://hi.savefrom.net/207/" class="lang-hi">हिन्दी‎</a></li><li><a href="https://id.savefrom.net/247/" class="lang-id">Bahasa Indonesia‬</a></li><li><a href="https://it2.savefrom.net/82/" class="lang-it">‪Italiano‬</a></li><li><a href="https://ja.savefrom.net/189/" class="lang-ja">日本語</a></li><li><a href="https://ko.savefrom.net/222/" class="lang-ko">한국어</a></li><li><a href="https://pl.savefrom.net/173/" class="lang-pl">Polski‎</a></li><li><a href="https://pt1.savefrom.net/59/" class="lang-pt">Português (Brasil)</a></li><li><a href="https://ro.savefrom.net/157/" class="lang-ro">Română</a></li><li><a href="https://ru.savefrom.net/240/" class="lang-ru">Русский</a></li><li><a href="https://th.savefrom.net/233/" class="lang-th">ไทย</a></li><li><a href="https://tr.savefrom.net/238/" class="lang-tr">Türkçe‬</a></li><li><a href="https://uk.savefrom.net/217/" class="lang-uk">Українська‬</a></li><li><a href="https://vi.savefrom.net/243/" class="lang-vi">Tiếng Việt</a></li><li><a href="https://zh.savefrom.net/226/" class="lang-zh">简体中文</a></li>      </ul>
+    </div>
+
+    <div class="f-nav-box">
+      <div class="f-nav-box-column copyright-box">
+        <img src="/img/logo_small2.svg" width="167" height="40" alt="">
+        <p class="copyright" dir="ltr">© 2008-2023</p>
+      </div>
+      <div class="f-nav-box-column f-nav-container">
+        <nav class="f-nav">
+                    <div class="f-nav-column f-nav-articles">
+            <ul class="">
+                                                <li><a href="https://en.savefrom.net/1-youtube-video-downloader-533nN/" >YouTube</a></li>
+                                                                <li><a href="https://en.savefrom.net/21-youtube-to-mp4-58Jx.html" >YouTube to mp4</a></li>
+                                                                <li><a href="https://en.savefrom.net/23-youtube-shorts-downloader.html" >YouTube Shorts</a></li>
+                                                                <li><a href="https://en.savefrom.net/9-how-to-download-facebook-video-217.html" >Facebook</a></li>
+                                                                <li><a href="https://en.savefrom.net/12-how-to-download-soundcloud-audio-68.html" >SoundCloud</a></li>
+                                                                <li><a href="https://en.savefrom.net/11-how-to-download-vimeo-video-133.html" >Vimeo</a></li>
+                                                                <li><a href="https://en.savefrom.net/274/download-from-instagram" >Instagram</a></li>
+                                                                <li><a href="https://en.savefrom.net/20-download-instagram-stories-204.html" >IG stories</a></li>
+                                                                <li><a href="https://en.savefrom.net/7-how-to-download-vk-music-videos-photos-84.html" >VK</a></li>
+                                                                <li><a href="https://en.savefrom.net/233/download-from-twitter" >Twitter</a></li>
+                                                                <li><a href="https://en.savefrom.net/189/download-from-tiktok" >TikTok</a></li>
+                                                                <li><a href="https://en.savefrom.net/16-youtube-downloader-app-234Ct.html" >APP</a></li>
+                                                                <li><a href="https://en.savefrom.net/36/reddit-video-downloader" >Reddit</a></li>
+                                                                <li><a href="https://en.savefrom.net/22-threads-downloader.html" >Threads</a></li>
+                                          </ul>
+          </div>
+          <div class="f-nav-column f-nav-pages">
+            <ul class="">
+                                                <li><a href="https://en.savefrom.net/26/apk" >APK</a></li>
+                                                                <li><a href="https://en.savefrom.net/15/faq.php" >FAQ</a></li>
+                                                                <li><a href="https://en.savefrom.net/19OD/user.php?vid=388" >Install</a></li>
+                                                                <li><a href="https://en.savefrom.net/17/webmaster.php" >For webmasters</a></li>
+                                                                <li><a href="https://en.savefrom.net/6/contact.php" >Feedback</a></li>
+                                                                <li><a href="https://en.savefrom.net/1/api.php" >API</a></li>
+                                                                <li><a href="https://en.savefrom.net/6/advertising.php" >Advertising</a></li>
+                                                                <li><a href="https://en.savefrom.net/34/terms.html" rel="nofollow">Terms of Service</a></li>
+                                                                <li><a href="https://en.savefrom.net/7/EULA.html" rel="nofollow">EULA</a></li>
+                                                                <li><a href="https://en.savefrom.net/139/privacy-policy.html" rel="nofollow">PP</a></li>
+                                          </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<script>
+  $(function(){
+    // menu
+    $('body').on('click', 'header .menu-btn', function(){
+      $('#nav_top').toggleClass('active');
+    });
+
+    var notyf = new Notyf();
+    var clipboard = new Clipboard('.clipboard-btn');
+    clipboard.on('success', function(e){
+      e.clearSelection();
+
+      notyf.success({
+        message: 'Copied',
+        ripple: false,
+        duration: 3000,
+      });
+    });
+    clipboard.on('error',function(e){
+      notyf.error({
+        message: 'Unable to copy',
+        ripple: false,
+        duration: 3000,
+      });
+    });
+  });
+
+  $('.spoiler-box:not(.open)').hide();
+</script>
+
+      <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+    function yandexMetrika() {
+      if (_sf && _sf.stats && _sf.stats.yaMetrikaEnabled === false) {
+        if(top == self) {
+          return;
+        }
+
+        if (!document.referrer || document.referrer.search(
+            /^https?:\/\/(metrika.yandex.ru\/|webvisor\.com\/)/i) !== 0) {
+          return;
+        }
+      }
+
+      if (_sf.stats.yaMetrikaStart) {
+        return;
+      }
+
+      _sf.stats.yaMetrikaStart = true;
+
+      var options = {
+        id: 10041220,
+        webvisor: true,
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true
+      };
+
+      if (_sf.stats.yaMetrikaOptions && typeof _sf.stats.yaMetrikaOptions == 'object') {
+        for (var i in _sf.stats.yaMetrikaOptions) {
+          if (i != 'id' && _sf.stats.yaMetrikaOptions.hasOwnProperty(i)) {
+            options[i] = _sf.stats.yaMetrikaOptions[i];
+          }
+        }
+      }
+
+      
+      (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+          try {
+            w.yaCounter10041220 = new Ya.Metrika(options);
+          } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+        if (w.opera == "[object Opera]") {
+          d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    }
+    yandexMetrika();
+    </script>
+    <noscript><div><img src="//mc.yandex.ru/watch/10041220" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+
+<script>
+$('body').on('click sendstats', 'a.ga_track_events', function(event){
+  gaHandler.trackNode(this);
+});
+</script>
+<script type='application/ld+json'>
+{
+    "@context": "http://schema.org/",
+    "@type": "SoftwareApplication",
+    "applicationCategory": "MultimediaApplication",
+    "operatingSystem": [
+        "Windows",
+        "macOS",
+        "Android",
+        "iOS"
+    ],
+    "screenshot": "https://en.savefrom.net/assets/experiment/sf-helper/img/helper_button_screenshot_en.png",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingCount": "52112",
+        "reviewCount": "52112",
+        "bestRating": "5",
+        "ratingValue": "4.8",
+        "worstRating": "1",
+        "alternateName": "Free Online Video Downloader - SaveFrom.net",
+        "mainEntityOfPage": "https://en.savefrom.net/391GA/",
+        "name": "Savefrom"
+    },
+    "alternativeHeadline": "Savefrom",
+    "copyrightYear": "2023",
+    "headline": "Savefrom",
+    "keywords": "savefrom",
+    "offers": {
+        "@type": "Offer",
+        "price": "0.0",
+        "priceCurrency": "USD",
+        "alternateName": "Savefrom",
+        "description": "Download videos from popular platforms with SaveFrom.net, the leading free online video downloader. Easily save videos in various formats and resolutions. Start downloading now!",
+        "mainEntityOfPage": "https://en.savefrom.net/391GA/",
+        "name": "Savefrom"
+    },
+    "alternateName": "Savefrom",
+    "mainEntityOfPage": "https://en.savefrom.net/391GA/",
+    "name": "Savefrom"
+}
+</script>
 </body>
 </html>
+<script>
+(function() {
+  if (!_sf.app || typeof sfApp === 'undefined') {
+    return;
+  }
+
+  $('#sf_form').append($('<input type="hidden" name="app"/>').val(_sf.app));
+  $('body').addClass('sfApp').on('click', '.link.link-download', function(e){
+    var url = $(this).attr('href');
+    if(!url || url.search(/^https?:\/\//i) == -1)
+      url = this.getAttribute('data-copy');
+
+    var fileName = this.getAttribute('download') || '';
+    if (sfApp.download(url, fileName)) {
+      e.preventDefault();
+    }
+  });
+
+  $(function(){
+    var firstrunKey = _sf.app + '-firstrun';
+    var firstrunValue;
+
+    try {
+      firstrunValue = localStorage.getItem(firstrunKey);
+
+      if (!firstrunValue) {
+        localStorage.setItem(firstrunKey, '1');
+      }
+    } catch (error) {}
+
+    if (!firstrunValue && window.gaHandler) {
+      window.gaHandler.track('send;event;firstrun;' + _sf.app + ';' + sfApp.version());
+    }
+  });
+})();
+</script>
