@@ -1,96 +1,46 @@
-# import requests
-# from bs4 import BeautifulSoup
-# # from mark1 import track_names
-
-# def fetchandsave(url, path):
-#     r = requests.get(url)
-#     with open (path, 'w') as f:
-#         f.write(r.text)
-
-# url = "https://new.myfreemp3juices.cc/"
-
-# fetchandsave(url, "fetched_data/flac_mp.html")
-
-# with open ('fetched_data/flac_mp.html', 'r') as file:
-#     html_doc = file.read()
-
-# soup = BeautifulSoup(html_doc, 'html.parser')
-
-# # srch = soup.find('container',{'class':'input-group'})
-
-# srch_inp = soup.find('input', {'id': 'query'})
-
-# # keywords = "maps maroon5"
-
-# # srch_inp['value']= keywords
-
-# post_data = {
-    
-#     srch_inp['id']: 'maps maroon5'
-    
-#     }
-
-# response = requests.post(url, data=post_data)
-
-
-# with open('fetched_data/result.html', 'w') as file:
-#     file.write(response.text)
-
-
-# print(response.status_code)
-
-
-
-
-
-
-
-
-
-
 import requests
 from bs4 import BeautifulSoup
+# from mark1 import track_names
 
-# URL of the web page
-url = 'https://new.myfreemp3juices.cc'
+def fetchandsave(url, path):
+    r = requests.get(url)
+    with open (path, 'w') as f:
+        f.write(r.text)
 
-# Perform an initial GET request to get the page content
-response = requests.get(url)
+url = ""
 
-# Check if the request was successful
-if response.status_code == 200:
-    # Parse the HTML content of the page
-    soup = BeautifulSoup(response.text, 'html.parser')
+fetchandsave(url, "fetched_data/flac_mp.html")
 
-    # Find the search bar input element
-    search_bar = soup.find('input', {'id': 'query'})
+with open ('fetched_data/flac_mp.html', 'r') as file:
+    html_doc = file.read()
 
-    # Check if the search bar was found
-    if search_bar:
-        # Define your search query
-        search_query = 'Your search query here'
+soup = BeautifulSoup(html_doc, 'html.parser')
 
-        # Set the search bar value
-        search_bar['value'] = search_query
+# srch = soup.find('container',{'class':'input-group'})
 
-        # Submit the form (assuming it's a form-based search)
-        form = search_bar.find_parent('form')
-        if form:
-            response = requests.post(url, data=form.serialize())
+srch_inp = soup.find('input', {'id': 'query'})
 
-            # Check if the search request was successful
-            if response.status_code == 200:
-                # Now you can parse the search results and extract the information you need
-                # You'll need to inspect the HTML of the search results to extract relevant data
-                search_results = BeautifulSoup(response.text, 'html.parser')
-                # Process search results as needed
-            else:
-                print('Failed to submit the search request.')
-        else:
-            print('No search form found on the page.')
-    else:
-        print('Search bar not found on the page.')
-else:
-    print('Failed to access the web page.')
+# keywords = "maps maroon5"
+
+# srch_inp['value']= keywords
+
+post_data = {
+    
+    srch_inp['id']: 'maps maroon5'
+    
+    }
+
+response = requests.post(url, data=post_data)
+
+
+with open('fetched_data/result.html', 'w') as file:
+    file.write(response.text)
+
+
+print(response.status_code)
+
+
+
+
 
 
