@@ -77,5 +77,9 @@ if response.status_code == 200:
    tracks = playlist_data['items']
    for item in tracks:
         track_names = item['track']['name']
+        print(track_names)
+        with open('fetched_data/tracknames.text', 'a') as l:
+            l.write(track_names + '\n')
 else:
      print(f"unable to parse any data.{response.status_code}error")
+
