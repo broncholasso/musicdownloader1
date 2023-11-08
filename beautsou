@@ -1,35 +1,20 @@
-import requests
-from bs4 import BeautifulSoup
+import youtube_dl # client to many multimedia portals
 
-def fetchandsave(url, path):
-    r = requests.get(url)
-    with open (path, 'w') as f:
-        f.write(r.text)
-
-url = "https://en.savefrom.net/391GA/"
-
-fetchandsave(url, "fetched_data/flac_mp.html")
-
-with open ('fetched_data/flac_mp.html', 'r') as file:
-    html_doc = file.read()
-
-soup = BeautifulSoup(html_doc, 'html.parser')
-
-srch = soup.find('form', class_="sf-form link-form")
-
-srch_inp = soup.find('input', {'name': 'sf_url'})
-
-
-post_data = {
-    
-    srch_inp['name']: 'https://www.youtube.com/watch?v=th5_9woFJmk'
-    
+# downloads yt_url to the same directory from which the script runs
+def download_audio(yt_url):
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '192',
+        }],
     }
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        ydl.download([yt_url])
 
+def main():
+    yt_url = "https://www.youtube.com/watch?v=8OAPLk20epo"
+    download_audio(yt_url)
 
-response = requests.post(url, data=post_data)
-
-
-with open('fetched_data/result.html', 'w') as file:
-    file.write(response.text)
-
+main()
