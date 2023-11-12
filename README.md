@@ -54,6 +54,6 @@ Before running the script, make sure you have the following:
     API_KEY1=YOUR_YOUTUBE_API_KEY
 
 
-{== RUN THE 'main_scr1.py'
-{== Enter your Spotify playlist link when prompted.
-{== Sit back and enjoy as the script fetches and downloads your favorite songs as MP3 files!
+- RUN THE 'main_scr1.py'
+- Enter your Spotify playlist link when prompted.
+- Sit back and enjoy as the script fetches and downloads your favorite songs as MP3 files!
