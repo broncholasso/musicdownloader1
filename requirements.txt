@@ -1,0 +1,4 @@
+aiohttp==3.9.0b0
+google-api-python-client==2.23.0
+yt-dlp==2022.10.25
+python-dotenv==0.19.0
