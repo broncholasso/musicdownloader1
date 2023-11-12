@@ -6,7 +6,9 @@ import json
 from requests import post, get
 from googleapiclient.discovery import build
 import yt_dlp
-
+import asyncio
+import aiohttp
+import threading
 
 load_dotenv()
 
@@ -14,7 +16,8 @@ load_dotenv()
 client_id = os.getenv("client_id")
 client_secret = os.getenv("client_secret")
 
-def get_token():
+
+async def get_token():
     auth_string = client_id + ":" + client_secret
     auth_bytes = auth_string.encode("utf-8")
     auth_base64 = str(base64.b64encode(auth_bytes), "utf-8")
@@ -26,17 +29,14 @@ def get_token():
 
     }
     data = {"grant_type": "client_credentials"}
-    result = post(url, headers= headers, data= data)
-    json_result = json.loads(result.content)
-    token = json_result["access_token"]
-    return token
 
-token = get_token()
+    async with aiohttp.ClientSession() as session:
+        async with session.post(url, headers=headers, data=data) as response:
+            json_result = await response.json()
+            token = json_result["access_token"]
+            return token
 
-# def get_auth(token):
-#     return {"authorization" : "bearer " + token}
-
-def extract_id(usr_url):
+async def extract_id(usr_url):
     id = None
     if "open.spotify.com/playlist/" in usr_url:
         seg1 = usr_url.split("/")
@@ -49,87 +49,108 @@ def extract_id(usr_url):
     return id
    
 
-usr_url = input("please provide your playlist link : ")
+async def fetch_track_names(id, access_token):
+    market = 'ES'
+    fields = 'items(track(name))'
 
-id = extract_id(usr_url)
+    endpoint = f"https://api.spotify.com/v1/playlists/{id}/tracks"
 
-# id = "4uhywAuvqNRPLs8Z7MYYG5"
-
-
-access_token = token
-market = 'ES'
-fields = 'items(track(name))'
-
-endpoint = f"https://api.spotify.com/v1/playlists/{id}/tracks"
-
-headers = {
+    headers = {
    
-    "Authorization" : "Bearer " + access_token
-}
+        "Authorization" : "Bearer " + access_token
+    }
 
-query = {
+    query = {
    
-   'market':market,
-   'fields':fields
-}
+        'market':market,
+        'fields':fields
+    }
 
-response = requests.get(endpoint, headers=headers, params=query)
+    async with aiohttp.ClientSession() as session:
+        async with session.get(endpoint, headers = headers, params = query) as response:
+            if response.status == 200:
+                playlist_data = await response.json()
+                return [item['track']['name'] for item in playlist_data.get('items',[])]
+            else:
+                print(f"Unable to parse any data. {response.status} error")
+                return []
+                # tracks = playlist_data['items']
+                # for item in tracks:
+                #     track_names = item['track']['name']
+                #     print(track_names)
+                # with open('fetched_data/tracknames.text', 'a') as l:
+                #     l.write(track_names + '\n')
 
-if response.status_code == 200:
-   playlist_data = response.json()
-   tracks = playlist_data['items']
-   for item in tracks:
-        track_names = item['track']['name']
-        print(track_names)
-        with open('fetched_data/tracknames.text', 'a') as l:
-            l.write(track_names + '\n')
-else:
-     print(f"unable to parse any data.{response.status_code}error")
+async def search_youtube(track_names, api_key):
+    youtube_links = []
 
-#2 ----
-
-api_key = os.getenv('API_KEY')
-
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credentials.json"
-
-youtube = build("youtube", "v3", developerKey=api_key)
-
-with open ('fetched_data/tracknames.text', 'r') as p:
-    for line in p:
-        search_query = line.strip() + '\n'
+    def get_youtube_results(track_name):
+        nonlocal youtube_links
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "credentials.json"
+        youtube = build('youtube', 'v3', developerKey=api_key)
+        search_query = track_name + '\n'
         search_response = youtube.search().list(
             q=search_query,
-            type="video",
-            part="id",
-            maxResults=3
-        )
-        response = search_response.execute()
-        if 'items' in response:
-            first_video_id = response['items'][0]['id']['videoId']
-            link = f'https://www.youtube.com/watch?v={first_video_id}'
+            type='video',
+            part='id',
+            maxResults=1,
+        ).execute()
+
+        if 'items' in search_response:
+            video_id = search_response['items'][0]['id']['videoId']
+            link = f'https://www.youtube.com/watch?v={video_id}'
             print(link)
+            youtube_links.append(link)
         else:
             print("No video results found.")
 
-#3-----
-        path = 'fetched_data/song'
-        url = link
+    threads = []
+    for track_name in track_names:
+        thread = threading.Thread(target=get_youtube_results, args=(track_name,))
+        threads.append(thread)
+        thread.start()
+
+    for thread in threads:
+        thread.join()
+
+    return youtube_links
 
 
+async def download_songs(youtube_links):
+    path = 'fetched_data/song'
+
+    for url in youtube_links:
         ydl_opts = {
-        'format': 'bestaudio/best',
-        'outtmpl': f'{path}/%(title)s.%(ext)s',
+            'format': 'bestaudio/best',
+            'outtmpl': f'{path}/%(title)s.%(ext)s',
         }
-
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(url, download=True)
-            original_file = ydl.prepare_filename(info_dict)
+            title = info_dict.get('title', None)
+            if title:
+                mp3_file = os.path.join(path, f"{title}.mp3")
+                if os.path.exists(mp3_file):
+                    print(f"Song '{title}' already exists. Skipping download.")
+                else:
+                    print(f'Successfully downloaded: {mp3_file}')
+                    # Rename the file from .webm to .mp3
+                    original_file = ydl.prepare_filename(info_dict)
+                    new_file = os.path.splitext(original_file)[0] + '.mp3'
+                    os.rename(original_file, new_file)
+                    print(f'Successfully renamed to MP3: {new_file}')
+            else:
+                print("Failed to retrieve song information.")
 
-        new_file = os.path.splitext(original_file)[0] + '.mp3'
-        os.rename(original_file, new_file)
+async def main():
+    access_token = await get_token()
+    usr_url = input(f'please provide your playlist link: \n')
+    id = await extract_id(usr_url)
+    
 
-        # print(f'Successfully renamed to MP3: {new_file}')
+    if id:
+        track_names = await fetch_track_names(id,access_token)
+        youtube_links = await search_youtube(track_names, os.getenv("API_KEY1"))
+        await download_songs(youtube_links)
 
-
-
-
+if __name__ == "__main__":
+    asyncio.run(main())
