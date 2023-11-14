@@ -10,6 +10,7 @@ import asyncio
 import aiohttp
 import threading
 
+
 load_dotenv()
 
 
@@ -74,12 +75,6 @@ async def fetch_track_names(id, access_token):
             else:
                 print(f"Unable to parse any data. {response.status} error")
                 return []
-                # tracks = playlist_data['items']
-                # for item in tracks:
-                #     track_names = item['track']['name']
-                #     print(track_names)
-                # with open('fetched_data/tracknames.text', 'a') as l:
-                #     l.write(track_names + '\n')
 
 async def search_youtube(track_names, api_key):
     youtube_links = []
@@ -116,16 +111,15 @@ async def search_youtube(track_names, api_key):
     return youtube_links
 
 
-async def download_songs(youtube_links):
+async def download_song(url, semaphore):
     path = 'fetched_data/song'
-
-    for url in youtube_links:
+    async with semaphore:  
         ydl_opts = {
             'format': 'bestaudio/best',
             'outtmpl': f'{path}/%(title)s.%(ext)s',
         }
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info_dict = ydl.extract_info(url, download=True)
+            info_dict = await asyncio.to_thread(ydl.extract_info, url, download=True)
             title = info_dict.get('title', None)
             if title:
                 mp3_file = os.path.join(path, f"{title}.mp3")
@@ -133,13 +127,16 @@ async def download_songs(youtube_links):
                     print(f"Song '{title}' already exists. Skipping download.")
                 else:
                     print(f'Successfully downloaded: {mp3_file}')
-                    # Rename the file from .webm to .mp3
                     original_file = ydl.prepare_filename(info_dict)
                     new_file = os.path.splitext(original_file)[0] + '.mp3'
                     os.rename(original_file, new_file)
                     print(f'Successfully renamed to MP3: {new_file}')
             else:
                 print("Failed to retrieve song information.")
+
+async def download_songs(youtube_links):
+    semaphore = asyncio.Semaphore(9) 
+    await asyncio.gather(*(download_song(url, semaphore) for url in youtube_links))
 
 async def main():
     access_token = await get_token()
